@@ -51,8 +51,8 @@ public class ReportCSV extends HttpServlet {
                 String content = all_reports.get(r).getContent();
 
                 //CSVファイル内部に記載する形式で文字列を設定
-                String outputReports = employee.getCode() + ","+employee.getName() +","+ date+","+title+","+content+","
-                         + "\r\n";
+                String outputReports = employee.getCode() + ","+employee.getName() +","+ date+","+title+",\""+content.replaceAll("\r\n", "\n")+"\"," +
+                "\n";
 
                 //CSVファイルに書き込み
                 pw.print(outputReports);

@@ -101,7 +101,7 @@ public class AttendancesNewServlet extends HttpServlet {
 
 			} else {
 				request.setAttribute("errors", "既に登録が完了しています。");
-				request.getSession().removeAttribute("e");
+				request.getSession().removeAttribute("errors");
 			}
 
 		}

@@ -37,7 +37,7 @@ public class EmployeeCSV extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("application/octet-stream" + ";charset=utf-8");
-		response.setHeader("Content-Disposition", "attachment; filename=\"attendance.csv\"");
+		response.setHeader("Content-Disposition", "attachment; filename=\"employee.csv\"");
 
 		EntityManager em = DBUtil.createEntityManager();
 		try (PrintWriter pw = response.getWriter()) {
